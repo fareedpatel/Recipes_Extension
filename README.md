@@ -5,7 +5,7 @@ Team members:
 
 Follow us!
 
--Eduardo M Sanchez Delgado https://github.com/hedudelgado
+-Eduardo M Sanchez Delgado https://github.com/hedudelgado /n
 -Rebecca Piper https://github.com/RPiper93
 -Wim Hekkelman https://github.com/jwhekk
 -Fareed Patel https://github.com/fareedpatel
@@ -68,7 +68,7 @@ As a user
 So that recipes can be removed
 I want to be able to delete my recipes
 ```
-```
+``
 As recipe owner
 To prevent others to change my recipe
 You need to be signed
@@ -190,11 +190,13 @@ JavaScript/Angular - Testing
 -----------------------------
 
 Make sure the rails server is running for testing angular as they interact within the end to end tests(e2e).
+```
+$rails s
+```
 
-Make sure you are in Frontend directory for Angular - e2e tests run:
+Make sure you are in Frontend directory for Angular - e2e tests, in a separate command line run:
 ```
 $npm install
-$rails s (separate command line)
 $npm run Protractor
 ```
 
