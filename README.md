@@ -3,16 +3,15 @@
 Team members:
 -------------
 
+Follow us!
+
 -Eduardo M Sanchez Delgado https://github.com/hedudelgado
 -Rebecca Piper https://github.com/RPiper93
 -Wim Hekkelman https://github.com/jwhekk
 -Fareed Patel https://github.com/fareedpatel
 
 
-
-
 User Stories
-
 
 ```
 As a  user
@@ -69,7 +68,7 @@ As a user
 So that recipes can be removed
 I want to be able to delete my recipes
 ```
-```
+``
 As recipe owner
 To prevent others to change my recipe
 You need to be signed
@@ -142,42 +141,61 @@ I would like to filter my search for recipes that don’t require more ingredien
 
 
 Technology Used
-
-AngularJS
+---------------
+Ruby on Rails Back End
+AngularJS Front End ()
 
 Protractor
 Karma
-Ruby on Rails
-
 Rspec
+
 Installation Instructions
+-------------------------
+```
+git clone https://github.com/hedudelgado/Recipes-project
+$cd Recipes-project
+$bundle install
+$rake db:create
+$rake db:migrate
+$npm install bower -g
+$rake bower:install
+$rake routes
+```
 
-git clone https://github.com/russellvaughan/makers-bnb-ra.git
-cd makersBnB
-bundle install
-rake db:create
-rake db:migrate
-npm install bower -g
-rake bower:install
-rake routes 
-rails s
-Launch the Angular server
+Run the servers
+---------------
 
-Go to http://localhost:3000 (or any other path the Api uses) in your browser, make sure the server is running.
+```
+Back End (within backend directory) ->rails s 
+Go to http://localhost:3000 (or any other path the Api uses) in your browser, to make sure the server is running.
+```
+```
+Front end (within front end directory)-> npm start
+Go to http://localhost:8000 (or any other path the Angular uses) in your browser, to make sure the server is running.
+```
+
+
 
 Testing Instructions
+--------------------
 
-RSpec (unit and feature tests)
+RSpec (unit and feature tests, within back end directory)
 
-rails g rspec:install
-rspec
+```
+$rails g rspec:install
+$rspec
+``` 
+
 JavaScript/Angular - Testing
+-----------------------------
 
-Make sure the rails server is running for testing angular as they interact within the end to end tests(e2e)
+Make sure the rails server is running for testing angular as they interact within the end to end tests(e2e).
 
-Make sure you are in Frontend directory. for JavaScript/Angular - e2e tests run:
+Make sure you are in Frontend directory for Angular - e2e tests run:
+```
+$npm install
+$rails s (separate command line)
+$npm run Protractor
+```
 
-npm install
-rails s (separate command line)
-npm run Protractor
-To test drive the app, make sure you have the Rails and Angular severs running in different command line windows, then in your brower visit: For Rails http://localhost:3000 For Angularjs http://localhost:8000
+To test drive the app, make sure you have the Rails and Angular severs running in different command line taps, then in your brower visit: For Rails http://localhost:3000 For Angularjs http://localhost:8000
