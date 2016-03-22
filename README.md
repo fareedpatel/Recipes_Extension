@@ -202,3 +202,9 @@ $npm run Protractor
 ```
 
 To test drive the app, make sure you have the Rails and Angular severs running in different command line taps, then in your brower visit: For Rails http://localhost:3000 For Angularjs http://localhost:8000
+
+
+Project Diagram
+---------------
+
+[![solarized dualmode](https://github.com/hedudelgado/Recipes-project/blob/master/diagram.png)](#features)
