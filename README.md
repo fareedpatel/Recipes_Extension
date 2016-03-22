@@ -5,9 +5,9 @@ Team members:
 
 Follow us!
 
--Eduardo M Sanchez Delgado https://github.com/hedudelgado /n
--Rebecca Piper https://github.com/RPiper93
--Wim Hekkelman https://github.com/jwhekk
+-Eduardo M Sanchez Delgado https://github.com/hedudelgado  
+-Rebecca Piper https://github.com/RPiper93  
+-Wim Hekkelman https://github.com/jwhekk  
 -Fareed Patel https://github.com/fareedpatel
 
 
