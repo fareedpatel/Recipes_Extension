@@ -15,11 +15,12 @@ describe('ViewRecipesCtrl', function(){
 
 
   it('has a attribute called $scope.recipes that returns an object from api', function(){
-    $httpBackend.flush()
-    console.log('something')
+  	scope.viewRecipes()
+  	$httpBackend.flush()
     expect(scope.recipes).toEqual(data)
   })
   it('has an object called $scope.recipes that contains the name of a recipe from api', function(){
+    scope.viewRecipes()
     $httpBackend.flush()
     expect(scope.recipes[0].name).toEqual('Pizza margarita')
   })

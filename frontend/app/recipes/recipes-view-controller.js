@@ -10,7 +10,9 @@ angular.module('recipesApp.viewrecipes', ['ngRoute'])
 }])
 
 .controller('ViewRecipesCtrl', [ "$scope", "$http", function($scope, $http) {
+ $scope.viewRecipes = function() {
  	$http.get('http://localhost:3000/recipes.json').success(function(data){
  		$scope.recipes = data
  	});
+ }
 }]);
