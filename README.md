@@ -154,7 +154,7 @@ Installation Instructions
 -------------------------
 ```
 git clone https://github.com/hedudelgado/Recipes-project
-$cd Recipes-project
+$cd RecipesAPI
 $bundle install
 $rake db:create
 $rake db:migrate
