@@ -3,7 +3,7 @@
 angular.module('recipesApp.viewrecipes', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/recipes', {
+  $routeProvider.when('/recipes-view', {
     templateUrl: 'recipes/recipes-view.html',
     controller: 'ViewRecipesCtrl'
   });

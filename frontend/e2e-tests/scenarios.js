@@ -7,20 +7,20 @@ describe('recipesApp', function() {
 
   it('should automatically redirect to /recipes-view when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/recipes");
+    expect(browser.getLocationAbsUrl()).toMatch("/index");
   });
 
 
-  describe('view1', function() {
+  describe('/recipes', function() {
 
-    beforeEach(function() {
-      browser.get('index.html#/view1');
-    });
+    it('should be able to add recipes', function(){
+      browser.get('index.html');
+      element(by.id("New_recipe")).click();
+      element(by.id('name')).sendKeys("chicken something");
+      element(by.id("submit")).click();
+      element(by.id("See_recipe")).click();
+      expect(element.all(by.css('[ng-view] p')).getText()).toMatch(/chicken something/)
+    })
+  })
 
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/Recipes/);
-    });
-  });
 });
