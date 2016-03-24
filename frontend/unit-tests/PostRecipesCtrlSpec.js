@@ -9,7 +9,7 @@ describe('PostRecipesCtrl', function(){
       location = $location
       scope = $rootScope.$new();
       ctrl = $controller('PostRecipesCtrl', {$scope:scope})
-      var params = {id: 1, name: "Pizza margarita"}
+      var params = {id: 1, name: "Pizza margarita", instructions: "Cook 20 minutes"}
     });
   });
   it('send a post request to the api', function(){
