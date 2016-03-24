@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('recipesApp.recipes', ['ngRoute'])
+angular.module('recipesApp.viewrecipes', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/recipes', {
