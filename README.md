@@ -39,13 +39,14 @@ As a user
 So others can choose based on dietary categories
 I want to be able to add a dietary category to my recipe
 ```
+:construction:
 ```
 As a user
 So people can cook my recipe,
 I want to add instructions to my recipe
 ```
 ```
-As auser
+As a user
 So that I can change my recipe
 I want to be able to update my recipe
 ```
@@ -59,7 +60,7 @@ As a user
 So that others can see how to exactly cook the recipe
 I want to be able to upload a youtube link
 ```
-:construction:
+:white_check_mark:
 ```
 As a user
 So that others can see my recipes
