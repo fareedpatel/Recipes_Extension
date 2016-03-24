@@ -13,7 +13,7 @@ Follow us!
 
 User Stories
 ------------
-:construction:
+:white_check_mark:
 ```
 As a  user
 So that I can share my recipe
@@ -59,6 +59,7 @@ As a user
 So that others can see how to exactly cook the recipe
 I want to be able to upload a youtube link
 ```
+:construction:
 ```
 As a user
 So that others can see my recipes
