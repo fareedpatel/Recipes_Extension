@@ -10,12 +10,9 @@ angular.module('recipesApp.postrecipe', ['ngRoute'])
 }])
 
 .controller('PostRecipesCtrl', [ "$scope", "$http", '$location', function($scope, $http, $location) {
- $scope.postRecipe = function(name) {
- 	console.log(name)
- 	var param= {name}
+ $scope.postRecipe = function(name, instructions) {
+ 	var param= {name, instructions}
  	$http.post('http://localhost:3000/recipes.json', param).success(function(data,status){
- 		console.log(data)
- 		console.log(status)
  		$location.path('/recipes');
  	});
  }

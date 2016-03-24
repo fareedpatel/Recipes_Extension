@@ -2,7 +2,7 @@
 <section ng-init="viewRecipes()">
 
 <ul ng-repeat="recipe in recipes">
-	Recipe: <p id="{{recipe.name}}"> {{recipe.name}} </p> 
+	Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}"> {{recipe.name}} </a> 
 </ul>
 </section>
 </input>
