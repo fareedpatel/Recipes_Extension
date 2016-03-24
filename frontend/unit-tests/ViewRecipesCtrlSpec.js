@@ -7,7 +7,6 @@ describe('ViewRecipesCtrl', function(){
     inject(function($controller, $rootScope, _$httpBackend_){
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('http://localhost:3000/recipes.json').respond(data)
-      console.log(data)
       scope = $rootScope.$new();
       ctrl = $controller('ViewRecipesCtrl', {$scope:scope})
     });
