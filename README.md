@@ -68,6 +68,7 @@ As a user
 So that others can see my recipes
 I want to be able to see a list of recipes
 ```
+:white_check_mark:
 ```
 As a user
 So that recipes can be removed
