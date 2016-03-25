@@ -5,7 +5,8 @@ angular.module('recipesApp', [
   'recipesApp.viewrecipes',
   'recipesApp.postrecipe',
   'recipesApp.viewrecipesdetails',
-  'recipesApp.deleterecipes'
+  'recipesApp.deleterecipes',
+  'recipesApp.updaterecipe'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/index'});
