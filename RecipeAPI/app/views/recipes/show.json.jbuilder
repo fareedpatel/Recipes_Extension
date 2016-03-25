@@ -1,1 +1,1 @@
-json.extract! @recipe, :id, :name, :instructions, :created_at, :updated_at
+json.extract! @recipe, :id, :name, :instructions, :preparation_time, :created_at, :updated_at

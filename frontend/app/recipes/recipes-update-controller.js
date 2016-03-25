@@ -10,8 +10,8 @@ angular.module('recipesApp.updaterecipe', ['ngRoute'])
 }])
 
 .controller('UpdateRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
- $scope.editRecipe = function(name, instructions) {
-  var param = JSON.stringify({name, instructions})
+ $scope.editRecipe = function(name, instructions, preparation_time) {
+  var param = JSON.stringify({name, instructions, preparation_time})
   var number = $routeParams.recipeId
   $http.put('http://localhost:3000/recipes/' + number + '.json', param).success(function(data, status){
     $location.path('/recipes/'+number)

@@ -1,6 +1,7 @@
-<form id='recipes_form' ng-submit= 'postRecipe(name, instructions)'>
+<form id='recipes_form' ng-submit= 'postRecipe(name, instructions, preparation_time)'>
 Name: <input ng-model='name' id='name'><br>
 Instructions: <input ng-model='instructions' id='instructions'><br>
+Preparation Time: <input ng-model='preparation_time' id='preparation_time'><br>
 	<input id='submit' type='submit' value='submit'>
 </form>
 
