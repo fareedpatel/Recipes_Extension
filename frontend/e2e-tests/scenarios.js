@@ -32,6 +32,23 @@ describe('recipesApp', function() {
       browser.sleep(10000)
       expect(element.all(by.css('[ng-view]')).getText()).toMatch(/cook for 30 minutes/);
     })
-  })
+    it('should be able to delete recipes', function(){
+      browser.get('index.html');
+      element(by.id("New_recipe")).click();
+      element(by.id('name')).sendKeys("chickennew1");
+      element(by.id('instructions')).sendKeys("cook for 35 minutes"); 
+      element(by.id('submit')).click();
+      element(by.id("New_recipe")).click();
+      element(by.id('name')).sendKeys("chickendelete");
+      element(by.id('instructions')).sendKeys('cook quickly');
+      element(by.id('submit')).click();
+      element(by.id("See_recipe")).click();
+      element(by.id("chickendelete")).click();
+      element(by.id("Delete_recipe")).click();
+      browser.sleep(1000);
+      element(by.id("See_recipe")).click();
+      expect(element(by.id("chickendelete")).isPresent()).toBe(false);
+    });
+  });
 
 });
