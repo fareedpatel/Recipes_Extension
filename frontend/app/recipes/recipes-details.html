@@ -1,5 +1,8 @@
-
-{{recipe.name}}<br>
-{{recipe.instructions}}
-<a id="Delete_recipe" href="#/recipes/delete/{{recipe.id}}">
-	Delete Recipe </a>
+<div ng-controller='ViewRecipesDetailsCtrl'>
+	{{recipe.name}}<br>
+	{{recipe.instructions}}
+</div>
+<div ng-controller='DeleteRecipesCtrl'>
+	<form ng-click='deleteRecipe()' id="Delete_recipe">
+	<input type="submit" value="delete"></form>
+</div>

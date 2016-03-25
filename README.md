@@ -39,7 +39,6 @@ As a user
 So others can choose based on dietary categories
 I want to be able to add a dietary category to my recipe
 ```
-:construction:
 ```
 As a user
 So people can cook my recipe,
@@ -66,6 +65,7 @@ As a user
 So that others can see my recipes
 I want to be able to see a list of recipes
 ```
+:white_check_mark:
 ```
 As a user 
 So that recipes can be removed
