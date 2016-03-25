@@ -16,7 +16,7 @@ describe('recipesApp', function() {
     it('should be able to add recipes', function(){
       browser.get('index.html');
       element(by.id("New_recipe")).click();
-      element(by.id('name')).sendKeys("chicken something");    
+      element(by.id('name')).sendKeys("chicken something");
       element(by.id("submit")).click();
       element(by.id("See_recipe")).click();
       expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/chicken something/)
@@ -25,12 +25,28 @@ describe('recipesApp', function() {
       browser.get('index.html');
       element(by.id("New_recipe")).click();
       element(by.id('name')).sendKeys("chickennewonetotrythedetails");
-      element(by.id('instructions')).sendKeys("cook for 30 minutes");    
+      element(by.id('instructions')).sendKeys("cook for 30 minutes");
       element(by.id("submit")).click();
       element(by.id("See_recipe")).click();
+      browser.sleep(3000);
       element(by.id("chickennewonetotrythedetails")).click();
-      browser.sleep(10000)
+
       expect(element.all(by.css('[ng-view]')).getText()).toMatch(/cook for 30 minutes/);
+    })
+
+    it('should have instructions', function() {
+      browser.get('index.html');
+      element(by.id("New_recipe")).click();
+      element(by.id('name')).sendKeys("Ham");
+      element(by.id('instructions')).sendKeys("Open packet and eat");
+      element(by.id("submit")).click();
+      element(by.id("See_recipe")).click();
+      element(by.id("Ham")).click();
+      element(by.id("Update_recipe")).click();
+      element(by.id('name')).sendKeys("Ham");
+      element(by.id('instructions')).sendKeys("Open packet and enjoy");
+      element(by.id("submit")).click();
+      expect(element.all(by.css('[ng-view]')).getText()).toMatch(/Open packet and enjoy/);
     })
   })
 

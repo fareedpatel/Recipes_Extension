@@ -5,9 +5,9 @@ Team members:
 
 Follow us!
 
--Eduardo M Sanchez Delgado https://github.com/hedudelgado  
--Rebecca Piper https://github.com/RPiper93  
--Wim Hekkelman https://github.com/jwhekk  
+-Eduardo M Sanchez Delgado https://github.com/hedudelgado
+-Rebecca Piper https://github.com/RPiper93
+-Wim Hekkelman https://github.com/jwhekk
 -Fareed Patel https://github.com/fareedpatel
 
 
@@ -32,19 +32,21 @@ I would like to add a preparation time.
 ```
 As a user
 So that I can know the nutritional information
-I would like to give information regarding its nutritional content. 
+I would like to give information regarding its nutritional content.
 ```
 ```
 As a user
 So others can choose based on dietary categories
 I want to be able to add a dietary category to my recipe
 ```
-:construction:
+:white_check_mark:
 ```
 As a user
 So people can cook my recipe,
 I want to add instructions to my recipe
 ```
+
+:construction:
 ```
 As a user
 So that I can change my recipe
@@ -67,7 +69,7 @@ So that others can see my recipes
 I want to be able to see a list of recipes
 ```
 ```
-As a user 
+As a user
 So that recipes can be removed
 I want to be able to delete my recipes
 ```
@@ -82,7 +84,7 @@ So that I can see what I’m looking for
 I can search by ingredients (or leftovers)
 ```
 ```
-As a user 
+As a user
 So that I can post my own recipes
 I need to sign up
 ```
@@ -114,12 +116,12 @@ I would like to search by preparation time.
 ```
 As a user,
 I would like to see recipes by dietary restrictions
-I would like to filter by choices - vegan, vegetarian, gluten free, (pork free). 
+I would like to filter by choices - vegan, vegetarian, gluten free, (pork free).
 ```
 ```
 As a user,
 So that others can see my recipe on social networking sites
-I am able to share my recipe to facebook, twitter, tumblr, 
+I am able to share my recipe to facebook, twitter, tumblr,
 ```
 ```
 As a user,
@@ -145,11 +147,11 @@ I would like to filter my search for recipes that don’t require more ingredien
 
 Technology Used
 ---------------
-Ruby on Rails Back End  
-AngularJS Front End  
+Ruby on Rails Back End
+AngularJS Front End
 
-Protractor  
-Karma  
+Protractor
+Karma
 Rspec
 
 Installation Instructions
@@ -169,7 +171,7 @@ Run the servers
 ---------------
 
 ```
-Back End (within backend directory) ->rails s 
+Back End (within backend directory) ->rails s
 Go to http://localhost:3000 (or any other path the Api uses) in your browser, to make sure the server is running.
 ```
 ```
@@ -187,7 +189,7 @@ RSpec (unit and feature tests, within back end directory)
 ```
 $rails g rspec:install
 $rspec
-``` 
+```
 
 JavaScript/Angular - Testing
 -----------------------------
