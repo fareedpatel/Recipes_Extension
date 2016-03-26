@@ -46,7 +46,7 @@ So people can cook my recipe,
 I want to add instructions to my recipe
 ```
 
-:white_check_mark:
+:construction:
 ```
 As a user
 So that I can change my recipe
@@ -57,7 +57,6 @@ As a user
 So that others can see what the food looks like
 I want to be able to upload a picture
 ```
-:construction:
 ```
 As a user
 So that others can see how to exactly cook the recipe
