@@ -22,10 +22,20 @@ describe('recipesApp', function() {
       element(by.id('instructions')).sendKeys("cook for 30 minutes");
       element(by.id("submit")).click();
       element(by.id("See_recipe")).click();
-      browser.sleep(3000);
       element(by.id("chickennewonetotrythedetails")).click();
       expect(element.all(by.css('[ng-view]')).getText()).toMatch(/cook for 30 minutes/);
     })
+    it('should have a preparation time', function() {
+      browser.get('index.html');
+      element(by.id("New_recipe")).click();
+      element(by.id('name')).sendKeys("pasta");
+      element(by.id('instructions')).sendKeys("cook for 20 minutes");
+      element(by.id('preparation_time')).sendKeys("30");
+      element(by.id("submit")).click();
+      element(by.id("See_recipe")).click();
+      element(by.id("pasta")).click();
+      expect(element.all(by.css('[ng-view]')).getText()).toMatch(/30/);
+    });
     it('should be able to delete recipes', function(){
       browser.get('index.html');
       element(by.id("New_recipe")).click();

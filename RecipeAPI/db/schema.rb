@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160325163611) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.text     "instructions"
-    t.time     "preparation_time"
+    t.integer  "preparation_time"
   end
 
 end
