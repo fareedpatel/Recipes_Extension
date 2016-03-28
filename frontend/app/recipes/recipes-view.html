@@ -1,9 +1,14 @@
 <p>Recipes</p>
+
+Search by name: <input ng-model="query">
 <section ng-init="viewRecipes()">
 
-<ul ng-repeat="recipe in recipes">
-	Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}"> {{recipe.name}} </a>
+<ul ng-repeat="recipe in recipes | filter:query">
+	Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}
+          <p>{{recipe.snippet}}</p> </a>
 </ul>
 </section>
 
 </input>
+
+   

@@ -22,7 +22,6 @@ describe('recipesApp', function() {
       element(by.id('instructions')).sendKeys("cook for 30 minutes");
       element(by.id("submit")).click();
       element(by.id("See_recipe")).click();
-      browser.sleep(3000);
       element(by.id("chickennewonetotrythedetails")).click();
       expect(element.all(by.css('[ng-view]')).getText()).toMatch(/cook for 30 minutes/);
     })
@@ -52,5 +51,14 @@ describe('recipesApp', function() {
       element(by.id("submit")).click();
       expect(element.all(by.css('[ng-view]')).getText()).toMatch(/Open packet and enjoy/);
     })
+    it('should filter recipe list as a user types into the search box', function() {
+      browser.get('index.html');
+      element(by.id("See_recipe")).click();
+      var input = element(by.model('query'));
+      input.sendKeys('Ham');
+      browser.sleep(5000)
+      expect(element(by.id("chickentikkamasala")).isPresent()).toBe(false);
+      expect(element(by.id("Ham")).isPresent()).toBe(true);
+    });
   })
 });
