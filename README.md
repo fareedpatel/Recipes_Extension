@@ -57,6 +57,7 @@ As a user
 So that others can see what the food looks like
 I want to be able to upload a picture
 ```
+:white_check_mark:
 ```
 As a user
 So that others can see how to exactly cook the recipe
@@ -89,6 +90,7 @@ As a user
 So that I can post my own recipes
 I need to sign up
 ```
+:construction:
 ```
 As a signed in user
 So that people understand the popularity of the recipe
