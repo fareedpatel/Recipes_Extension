@@ -1,6 +1,17 @@
+<div ng-controller='VoteRecipesCtrl'>
+	<form ng-click='voteRecipeUp()' id="vote_recipe">
+	<input id= 'like' type="submit" value="Like"></form>
+</div>
+<br>
+<div ng-controller='VoteRecipesCtrl'>
+	<form ng-click='voteRecipeDown()' id="vote_recipe">
+	<input id= 'dislike' type="submit" value="DisLike"></form>
+</div>
 <div ng-controller='ViewRecipesDetailsCtrl'>
 	{{recipe.name}}<br>
 	{{recipe.instructions}}<br>
+	likes:{{recipe.votespositive}}<br>
+	dislikes:{{recipe.votesnegative}}<br>
 	<a href="#/recipes/{{recipe.id}}/edit-recipe" id="Update_recipe">Update Recipe</a>
 </div>
 <div ng-controller='DeleteRecipesCtrl'>

@@ -56,7 +56,6 @@ describe('recipesApp', function() {
       element(by.id("See_recipe")).click();
       var input = element(by.model('query'));
       input.sendKeys('Ham');
-      browser.sleep(5000)
       expect(element(by.id("chickentikkamasala")).isPresent()).toBe(false);
       expect(element(by.id("Ham")).isPresent()).toBe(true);
     });
