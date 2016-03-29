@@ -13,6 +13,7 @@ angular.module('recipesApp.viewrecipes', ['ngRoute'])
  $scope.viewRecipes = function() {
  	$http.get('http://localhost:3000/recipes.json').success(function(data){
  		$scope.recipes = data
+    console.log(data)
  	});
  }
 }]);

@@ -24,6 +24,7 @@ As a user
 So I can break down my recipe,
 I would like to add the ingredients list
 ```
+:white_check_mark:
 ```
 As a user
 So I can add know how long takes to cook the recipe,
@@ -46,7 +47,7 @@ So people can cook my recipe,
 I want to add instructions to my recipe
 ```
 
-:construction:
+:white_check_mark:
 ```
 As a user
 So that I can change my recipe

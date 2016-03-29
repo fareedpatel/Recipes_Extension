@@ -7,7 +7,8 @@ angular.module('recipesApp', [
   'recipesApp.viewrecipesdetails',
   'recipesApp.deleterecipes',
   'recipesApp.updaterecipe',
-  'recipesApp.voterecipe'
+  'recipesApp.voterecipe',
+  'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/index'});
