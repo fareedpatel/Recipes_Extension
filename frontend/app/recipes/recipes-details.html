@@ -2,11 +2,13 @@
 <div ng-controller='VoteRecipesCtrl'>
 	<form ng-click='voteRecipeUp()' id="vote_recipe">
 	<input id= 'like' type="submit" value="Like"></form>
+	likes:{{recipe.votespositive}}<br>
 </div>
 <br>
 <div ng-controller='VoteRecipesCtrl'>
 	<form ng-click='voteRecipeDown()' id="vote_recipe">
 	<input id= 'dislike' type="submit" value="DisLike"></form>
+	dislikes:{{recipe.votesnegative}}
 </div>
 
 <div ng-controller='DeleteRecipesCtrl'>
@@ -20,8 +22,7 @@
 	{{recipe.name}}<br>
 	{{recipe.instructions}}<br>
 	{{recipe.preparation_time}}<br>
-	likes:{{recipe.votespositive}}<br>
-	dislikes:{{recipe.votesnegative}}<br>
+
    <body>
   <iframe class="youtube-player" id='myLink' type="text/html" width="640" height="385" ng-src="{{trustSrc(movie.src)}}" allowfullscreen frameborder="0">
  </body>

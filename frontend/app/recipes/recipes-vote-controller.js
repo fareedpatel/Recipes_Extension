@@ -10,16 +10,24 @@ angular.module('recipesApp.voterecipe', ['ngRoute'])
 }])
 
 .controller('VoteRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
+  var number = $routeParams.recipeId
+  $http.get('http://localhost:3000/recipes/' + number + '.json').success(function(data){
+    $scope.recipe = data
+  });
+
  $scope.voteRecipeUp = function() {
   var number = $routeParams.recipeId
   $http.post('http://localhost:3000/recipes/' + number +'/like.json').success(function(data, status){
-    $location.path('/recipes')
+    $scope.recipe = data
+    $scope.$apply
+    $location.path('/recipes/'+ number)
     });
   };
   $scope.voteRecipeDown = function() {
   var number = $routeParams.recipeId
   $http.post('http://localhost:3000/recipes/' + number +'/dislike.json').success(function(data, status){
-    $location.path('/recipes')
+    $scope.recipe = data
+    $scope.$apply
     });
   };
  }]);
