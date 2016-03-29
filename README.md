@@ -19,6 +19,7 @@ As a  user
 So that I can share my recipe
 I want to be able to add a new recipe
 ```
+:white_check_mark:
 ```
 As a user
 So I can break down my recipe,

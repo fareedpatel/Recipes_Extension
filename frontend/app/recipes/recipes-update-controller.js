@@ -9,8 +9,8 @@ angular.module('recipesApp.updaterecipe', ['ngRoute'])
   });
 }])
 .controller('UpdateRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
-  $scope.editRecipe = function(name, instructions, preparation_time, link) {
-    var param = JSON.stringify({name, instructions, preparation_time, link})
+  $scope.editRecipe = function(name, ingredients, instructions, preparation_time, link) {
+    var param = JSON.stringify({name, ingredients, instructions, preparation_time, link})
     $scope.name = $routeParams.recipeName
     $scope.instructions = $routeParams.recipeInstructions
     var number = $routeParams.recipeId

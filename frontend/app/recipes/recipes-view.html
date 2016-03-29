@@ -1,15 +1,10 @@
 <p>Recipes</p>
-
 Search by name: <input ng-model="query">
 <section ng-init="viewRecipes()">
-
-<ul ng-repeat="recipe in recipes | filter:query">
-	Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}<br></a>
+  <ul ng-repeat="recipe in recipes | filter:query">
+    Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}<br></a>
     likes :{{recipe.votespositive}}<br>
     Dislikes :{{recipe.votesnegative}}
-</ul>
+  </ul>
 </section>
-
 </input>
-
-   

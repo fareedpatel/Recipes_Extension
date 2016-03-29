@@ -9,7 +9,7 @@ describe('DeleteRecipesCtrl', function(){
       location = $location
       scope = $rootScope.$new();
       ctrl = $controller('DeleteRecipesCtrl', {$scope:scope})
-      var params = {id: 1, name: "Pizza margarita", instructions: "Cook 20 minutes"}
+      var params = {iid: 1, name: "Pizza margarita", ingredients: 'dough, tomatoe, cheese', instructions: "Cook 20 minutes", preparation_time: 20, link: "https://www.youtube.com/watch?v=2kl3Liy5jcQ"}
     });
     it('sends a delete request the api', function(){
       scope.deleteRecipe(recipeId)
