@@ -1,12 +1,24 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-
   # GET /recipes
   # GET /recipes.json
   def index
     @recipes = Recipe.all
   end
 
+  def like
+    @recipe = Recipe.find(params[:recipe_id])
+    @votes = @recipe.votespositive + 1
+    @recipe.update(votespositive: @votes)
+    render :show
+  end
+
+  def dislike
+    @recipe = Recipe.find(params[:recipe_id])
+    @votes = @recipe.votesnegative + 1
+    @recipe.update(votesnegative: @votes)
+    render :show
+  end
   # GET /recipes/1
   # GET /recipes/1.json
   def show
@@ -25,9 +37,9 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-    p recipe_params
     respond_to do |format|
       if @recipe.save
+        p @recipe
         format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @recipe }
       else
@@ -50,7 +62,6 @@ class RecipesController < ApplicationController
       end
     end
   end
-
   # DELETE /recipes/1
   # DELETE /recipes/1.json
   def destroy
@@ -69,6 +80,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :ingredients, :instructions, :preparation_time, :link)
+      params.require(:recipe).permit(:name, :ingredients, :instructions, :preparation_time, :link, :votespositive, :votesnegative)
     end
 end

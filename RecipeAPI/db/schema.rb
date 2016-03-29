@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(version: 20160329104106) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.text     "instructions"
     t.integer  "preparation_time"
     t.string   "link"
     t.text     "ingredients"
+    t.integer  "votespositive",    default: 0
+    t.integer  "votesnegative"
   end
 
 end

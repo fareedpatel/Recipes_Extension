@@ -19,8 +19,7 @@ As a  user
 So that I can share my recipe
 I want to be able to add a new recipe
 ```
-
-:construction:
+:white_check_mark:
 ```
 As a user
 So I can break down my recipe,
@@ -60,6 +59,7 @@ As a user
 So that others can see what the food looks like
 I want to be able to upload a picture
 ```
+:white_check_mark:
 ```
 As a user
 So that others can see how to exactly cook the recipe
@@ -92,6 +92,7 @@ As a user
 So that I can post my own recipes
 I need to sign up
 ```
+:construction:
 ```
 As a signed in user
 So that people understand the popularity of the recipe
@@ -107,6 +108,7 @@ As a user,
 I would like to see the most popular recipes,
 I would like to sort them by number of votes
 ```
+:construcction:
 ```
 As a user,
 I would like to see some specific recipes,
