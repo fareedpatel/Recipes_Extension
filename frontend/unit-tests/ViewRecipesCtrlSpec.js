@@ -1,6 +1,7 @@
 describe('ViewRecipesCtrl', function(){
   var ctrl, scope, $httpBackend
-  var data = [{id: 1, name: "Pizza margarita"}, {id: 2, name: "rotten food"}]
+  var data = [{id: 1, name: "Pizza margarita", ingredients: "dough, tomato, cheese", instructions: "boil for ages", preparation_time: 20 },
+   {id: 2, name: "rotten food", ingredients: 'cheese, liver', instructions: "eat it raw", preparation_time: 1}]
 
   beforeEach(function(){
     module('recipesApp.viewrecipes');
@@ -22,5 +23,20 @@ describe('ViewRecipesCtrl', function(){
     scope.viewRecipes()
     $httpBackend.flush()
     expect(scope.recipes[0].name).toEqual('Pizza margarita')
+  })
+  it('has an object called $scope.recipes that contains the ingredients of a recipe from api', function(){
+    scope.viewRecipes()
+    $httpBackend.flush()
+    expect(scope.recipes[0].ingredients).toEqual('dough, tomato, cheese')
+  })
+  it('has an object called $scope.recipes that contains the instructions of a recipe from api', function(){
+    scope.viewRecipes()
+    $httpBackend.flush()
+    expect(scope.recipes[0].instructions).toEqual('boil for ages')
+  })
+    it('has an object called $scope.recipes that contains the preparation time of a recipe from api', function(){
+    scope.viewRecipes()
+    $httpBackend.flush()
+    expect(scope.recipes[0].preparation_time).toEqual(20)
   })
 });
