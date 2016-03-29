@@ -7,6 +7,7 @@ angular.module('recipesApp', [
   'recipesApp.viewrecipesdetails',
   'recipesApp.deleterecipes',
   'recipesApp.updaterecipe',
+  'recipesApp.voterecipe',
   'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
