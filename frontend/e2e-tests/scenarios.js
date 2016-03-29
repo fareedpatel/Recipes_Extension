@@ -58,5 +58,14 @@ describe('recipesApp', function() {
       element(by.id("foodwithvideo")).click();
       expect(element(by.id('myLink')).getAttribute('ng-src')).toEqual("https://www.youtube.com/embed/2kl3Liy5jcQ");
     })
+    it('should filter recipe list as a user types into the search box', function() {
+      browser.get('index.html');
+      element(by.id("See_recipe")).click();
+      var input = element(by.model('query'));
+      input.sendKeys('Ham');
+      browser.sleep(5000)
+      expect(element(by.id("chickentikkamasala")).isPresent()).toBe(false);
+      expect(element(by.id("Ham")).isPresent()).toBe(true);
+    });
   })
 });
