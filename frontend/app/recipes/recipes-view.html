@@ -1,6 +1,6 @@
 <p>Recipes</p>
 Search by name: <input ng-model="query">
-Search by ingredients: <input ng-model="ingredientValue">
+Search by ingredients: <input ng-model="ingredientValue" placeholder="ingredient 1, ingredient 2,...">
 <section ng-init="viewRecipes()">
   <ul ng-repeat="recipe in recipes | filter:query | searchIngredients:ingredientValue">
    <li> Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}<br></a>
