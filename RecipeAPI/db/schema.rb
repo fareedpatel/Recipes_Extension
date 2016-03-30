@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20160329104106) do
     t.text     "instructions"
     t.integer  "preparation_time"
     t.string   "link"
-    t.text     "ingredients"
     t.integer  "votespositive",    default: 0
     t.integer  "votesnegative"
+    t.text     "ingredients"
   end
 
 end
