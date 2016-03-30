@@ -1,12 +1,12 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'test' ]
 2 info using npm@3.6.0
 3 info using node@v5.7.1
 4 verbose stack Error: ENOENT: no such file or directory, open '/Users/sorry/Projects/Recipes-project/RecipeAPI/package.json'
 4 verbose stack     at Error (native)
 5 verbose cwd /Users/sorry/Projects/Recipes-project/RecipeAPI
 6 error Darwin 14.5.0
-7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "test"
 8 error node v5.7.1
 9 error npm  v3.6.0
 10 error path /Users/sorry/Projects/Recipes-project/RecipeAPI/package.json

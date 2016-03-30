@@ -17,7 +17,8 @@ describe('ViewRecipesCtrl', function(){
   it('has a attribute called $scope.recipes that returns an object from api', function(){
   	scope.viewRecipes()
   	$httpBackend.flush()
-    expect(scope.recipes).toEqual(data)
+    expect(scope.recipes).toEqual([{id: 1, name: "Pizza margarita", ingredients: ['dough', 'tomato', 'cheese'], instructions: "boil for ages", preparation_time: 20 },
+   {id: 2, name: "rotten food", ingredients: ['cheese', 'liver'], instructions: "eat it raw", preparation_time: 1}])
   })
   it('has an object called $scope.recipes that contains the name of a recipe from api', function(){
     scope.viewRecipes()
@@ -27,7 +28,7 @@ describe('ViewRecipesCtrl', function(){
   it('has an object called $scope.recipes that contains the ingredients of a recipe from api', function(){
     scope.viewRecipes()
     $httpBackend.flush()
-    expect(scope.recipes[0].ingredients).toEqual('dough, tomato, cheese')
+    expect(scope.recipes[0].ingredients).toEqual(['dough', 'tomato', 'cheese'])
   })
   it('has an object called $scope.recipes that contains the instructions of a recipe from api', function(){
     scope.viewRecipes()

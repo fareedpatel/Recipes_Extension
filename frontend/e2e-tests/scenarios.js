@@ -78,8 +78,8 @@ describe('recipesApp', function() {
       var input = element(by.model('ingredientValue'));
       input.sendKeys('bread');
       expect(element(by.id("Cereal")).isPresent()).toBe(false);
-      expect(element(by.id("Cheese Sandwich")).isPresent()).toBe(true);
-      expect(element(by.id("Bacon Sandwich")).isPresent()).toBe(true);
+      expect(element.all(by.css('[ng-view] a')).first().getText()).toMatch(/Cheese Sandwich/);
+      expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/Bacon Sandwich/);
     });
   });
 });
