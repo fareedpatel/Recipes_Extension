@@ -1,10 +1,11 @@
 <p>Recipes</p>
 Search by name: <input ng-model="query">
+Search by ingredients: <input ng-model="ingredientValue">
 <section ng-init="viewRecipes()">
-  <ul ng-repeat="recipe in recipes | filter:query">
-    Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}<br></a>
-    likes :{{recipe.votespositive}}<br>
-    Dislikes :{{recipe.votesnegative}}
+  <ul ng-repeat="recipe in recipes | filter:query | searchIngredients:ingredientValue">
+   <li> Recipe: <a id="{{recipe.name}}" href="#/recipes/{{recipe.id}}">{{recipe.name}}<br></a>
+    Likes: {{recipe.votespositive}}<br>
+    Dislikes: {{recipe.votesnegative}}</li>
   </ul>
 </section>
 </input>
