@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Recipedia</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -18,12 +18,24 @@
 <body>
   <main class="container-fluid">
     <section class="row menu">
-    <ul class="col-xs-12 menu__list">
-      <li class="col-xs-4 list__links"><a ng-href="#/add-recipe" id="New_recipe">New recipe</a>
-        <li><a ng-href="#/recipes-view"id='See_recipe'>See recipes</a></li>
-        <li><a ng-href="#/index">Main Page</a></li>
+      <ul class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 menu__list">
+        <li class="list__links">
+          <h4><a ng-href="#/recipes-view"id='See_recipe'>home</a>
+          </h4>
+        </li>
+        <li class="list__links">
+          <h4>
+            <a ng-href="#/add-recipe" id="New_recipe">new recipe</a>
+          </h4>
+        </li>
+        <!--         <li class="col-xs-4 list__links"><a ng-href="#/index">Main Page</a></li> -->
       </ul>
     </section>
+
+    <section class="row heading" >
+      <h1 class="col-xs-12 col-sm-12 col-md-12 heading__title">recipedia</h1>
+    </section>
+
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->

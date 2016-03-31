@@ -1,0 +1,58 @@
+.details {
+  text-align: center;
+  div {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+}
+
+.votes__up {
+  p {
+    text-align: right;
+  }
+}
+
+.votes__down {
+  p {
+    text-align: left;
+  }
+}
+
+.details__method {
+  text-align: left;
+}
+
+.method__ingredients {
+  height: 250px;
+    p {
+    padding-left: 10px;
+  }
+}
+
+.method__instructions {
+  height: 250px;
+  padding-left: 10px;
+  p {
+    padding-left: 10px;
+  }
+}
+
+.method__time {
+  text-align: left;
+  p {
+    height: 60px;
+    width: 60px;
+    padding-top: 23px;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+}
+
+.youtube-player {
+  margin-top: 10px;
+  height: 400px;
+  width: 100%;
+}

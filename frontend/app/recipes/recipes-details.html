@@ -1,27 +1,41 @@
-
-<div ng-controller='VoteRecipesCtrl'>
-	<form ng-click='voteRecipeUp()' id="vote_recipe">
-	<input id= 'like' type="submit" value="Like"></form>
-	Likes:{{recipe.votespositive}}<br>
-</div>
-<br>
-<div ng-controller='VoteRecipesCtrl'>
-	<form ng-click='voteRecipeDown()' id="vote_recipe">
-	<input id= 'dislike' type="submit" value="DisLike"></form>
-	Dislikes:{{recipe.votesnegative}}
-</div>
-<div ng-controller='DeleteRecipesCtrl'>
-	<form ng-click='deleteRecipe()' id="Delete_recipe">
-	<input type="submit" value="delete"></form>
-</div>
-<div>
-	<a href="#/recipes/{{recipe.id}}/{{recipe.name}}/{{recipe.instructions}}/{{recipe.ingredients}}/{{recipe.preparation_time}}/edit-recipe" id="Update_recipe">Update Recipe</a>
-</div>
-<div ng-controller='ViewRecipesDetailsCtrl'>
-	{{recipe.name}}<br>
-	{{recipe.instructions}}<br>
-	{{recipe.ingredients}}<br>
-	{{recipe.preparation_time}}<br>
- <body>
-  <iframe class="youtube-player" id='myLink' type="text/html" width="640" height="385" ng-src="{{trustSrc(movie.src)}}" allowfullscreen frameborder="0">
- </body>
+<section class="row details">
+  <div ng-controller='ViewRecipesDetailsCtrl' class="col-xs-12 col-sm-12 col-md-12 details__name">
+    <h2>{{recipe.name}}</h2>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 details__votes">
+    <div ng-controller='VoteRecipesCtrl' class="col-xs-6 col-sm-6 col-md-6 votes__up">
+      <p class="col-xs-9 col-sm-10 col-md-11">{{recipe.votespositive}}</p>
+      <button ng-click='voteRecipeUp()' id="vote_recipe" class="col-xs-3 col-sm-2 col-md-1">&#8743;</button>
+      </form>
+    </div>
+    <div ng-controller='VoteRecipesCtrl' class="col-xs-6 col-sm-6 col-md-6 votes__down">
+       <button ng-click='voteRecipeDown()' id="vote_recipe" class="col-xs-3 col-sm-2 col-md-1">&#8744;</button>
+      </form>
+      <p class="col-xs-9 col-sm-10 col-md-11">{{recipe.votesnegative}}</p>
+    </div>
+  </div>
+  <div ng-controller='ViewRecipesDetailsCtrl' class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 details__method">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 method__ingredients">
+      <p>{{recipe.ingredients}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 method__instructions">
+      <p>{{recipe.instructions}}</p>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-1 method__time">
+      <p>{{recipe.preparation_time}} mins</p>
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 method__video">
+      <iframe class="youtube-player" id='myLink' type="text/html" ng-src="{{trustSrc(movie.src)}}" allowfullscreen frameborder="0" />
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 details__change">
+    <div ng-controller='DeleteRecipesCtrl'>
+      <form ng-click='deleteRecipe()' id="Delete_recipe">
+        <input type="submit" value="Delete">
+      </form>
+    </div>
+    <div>
+      <a href="#/recipes/{{recipe.id}}/{{recipe.name}}/{{recipe.instructions}}/{{recipe.ingredients}}/{{recipe.preparation_time}}/edit-recipe" id="Update_recipe">Update Recipe</a>
+    </div>
+  </div>
+ </section>

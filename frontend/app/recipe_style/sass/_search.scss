@@ -1,0 +1,20 @@
+section.search {
+  height: 130px;
+}
+
+.search {
+  background-color: #5d4f4c;
+  text-align: center;
+  height: 75px;
+  color: #ffffff;
+  ul {
+    list-style: none;
+  }
+  input {
+    background-color: #433937;
+    border: 1px solid #504441;
+    border-radius: 5px;
+    padding: 4px;
+    color: #ffffff;
+  }
+}

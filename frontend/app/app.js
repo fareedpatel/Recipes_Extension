@@ -11,5 +11,5 @@ angular.module('recipesApp', [
   'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/index'});
+  $routeProvider.otherwise({redirectTo: '/recipes-view'});
 }]);
