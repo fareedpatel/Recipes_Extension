@@ -10,7 +10,7 @@ angular.module('recipesApp.deleterecipes', ['ngRoute'])
 }])
 .controller('DeleteRecipesCtrl', [ "$scope", "$http", "$routeParams", "$location", "DeleteRecipesService", function($scope, $http, $routeParams, $location, DeleteRecipesService) {
   var number = $routeParams.recipeId
-  $scope.deleteRecipe = function($routeParams) {
+  $scope.deleteRecipe = function() {
   	 var callBack = function(data,status){
   		$location.path('/recipes');
   	}

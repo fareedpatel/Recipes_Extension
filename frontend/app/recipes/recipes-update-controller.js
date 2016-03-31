@@ -8,16 +8,16 @@ angular.module('recipesApp.updaterecipe', ['ngRoute'])
     controller: 'UpdateRecipesCtrl'
   });
 }])
-.controller('UpdateRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
-    $scope.name = $routeParams.recipeName
-    $scope.instructions = $routeParams.recipeInstructions
-    $scope.ingredients = $routeParams.recipeIngredients
-    $scope.preparation_time = $routeParams.recipePreparation_time
-  $scope.editRecipe = function(name, ingredients, instructions, preparation_time, link) {
-    var param = JSON.stringify({name, ingredients, instructions, preparation_time, link})
+.controller('UpdateRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', "UpdateRecipeService", function($scope, $http, $location, $routeParams, UpdateRecipeService) {
+    // $scope.name = $routeParams.recipeName
+    // $scope.instructions = $routeParams.recipeInstructions
+    // $scope.ingredients = $routeParams.recipeIngredients
+    // $scope.preparation_time = $routeParams.recipePreparation_time
     var number = $routeParams.recipeId
-    $http.put('http://localhost:3000/recipes/' + number + '.json', param).success(function(data, status){
-      $location.path('/recipes/'+number)
-    });
-  };
+    $scope.editRecipe = function(name, ingredients, instructions, preparation_time, link, callBack) {
+    var callBack = function(data,status){
+      $location.path('/recipes');
+    }
+    UpdateRecipeService.updateRecipe(name, ingredients, instructions, preparation_time, link, number, callBack)
+  }
 }]);
