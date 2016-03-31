@@ -92,7 +92,7 @@ As a user
 So that I can post my own recipes
 I need to sign up
 ```
-:construction:
+:white_check_mark:
 ```
 As a signed in user
 So that people understand the popularity of the recipe
@@ -108,7 +108,7 @@ As a user,
 I would like to see the most popular recipes,
 I would like to sort them by number of votes
 ```
-:construcction:
+:white_check_mark:
 ```
 As a user,
 I would like to see some specific recipes,
