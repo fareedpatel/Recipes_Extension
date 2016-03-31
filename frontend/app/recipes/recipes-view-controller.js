@@ -37,3 +37,4 @@ app.filter('searchIngredients', function(){
   return filtered;
 };  
 });
+
