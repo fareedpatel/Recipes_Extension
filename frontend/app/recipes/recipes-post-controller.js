@@ -7,11 +7,11 @@ angular.module('recipesApp.postrecipe', ['ngRoute'])
     controller: 'PostRecipesCtrl'
   });
 }])
-.controller('PostRecipesCtrl', [ "$scope", "$http", '$location', function($scope, $http, $location) {
+.controller('PostRecipesCtrl', [ "$scope", "$http", '$location', 'PostRecipeService', function($scope, $http, $location, PostRecipeService) {
   $scope.postRecipe = function(name, ingredients, instructions, preparation_time, link) {
-  	var param= {name, ingredients, instructions, votespositive: 0, votesnegative: 0, preparation_time, link}
-   	$http.post('http://localhost:3000/recipes.json', param).success(function(data,status){
- 	  	$location.path('/recipes');
- 	  });
+    var callback = function(data,status){
+  		$location.path('/recipes');
+  	}
+  	PostRecipeService.createRecipe(name, ingredients, instructions, preparation_time, link, callback)
   }
 }]);
