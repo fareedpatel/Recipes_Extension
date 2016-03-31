@@ -9,7 +9,7 @@ angular.module('recipesApp.voterecipe', ['ngRoute'])
   });
 }])
 
-.controller('VoteRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', 'GetVotes', 'VoteUp', function($scope, $http, $location, $routeParams,GetVotes, VoteUp) {
+.controller('VoteRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', 'GetVotes', 'VoteUp','VoteDown', function($scope, $http, $location, $routeParams,GetVotes, VoteUp, VoteDown) {
   
   var number = $routeParams.recipeId
   var callBack2 = function(data,status){
@@ -18,8 +18,8 @@ angular.module('recipesApp.voterecipe', ['ngRoute'])
   GetVotes.getVotesRecipe(number, callBack2)
 
  $scope.voteRecipeUp = function(number, callBack1) {
-  var number = $routeParams.recipeId
-  var callBack1 = function(data,status){
+    var number = $routeParams.recipeId
+    var callBack1 = function(data,status){
     $scope.recipe = data
     $scope.$apply
     $location.path('/recipes/'+ number)
@@ -27,12 +27,14 @@ angular.module('recipesApp.voterecipe', ['ngRoute'])
     VoteUp.getVotesUp(number,callBack1)
   };
 
-
-  $scope.voteRecipeDown = function() {
-  var number = $routeParams.recipeId
-  $http.post('http://localhost:3000/recipes/' + number +'/dislike.json').success(function(data, status){
+  $scope.voteRecipeDown = function(number, callBack3) {
+    var number = $routeParams.recipeId
+    var callBack3 = function(data,status){
     $scope.recipe = data
     $scope.$apply
-    });
+    $location.path('/recipes/'+ number)
+    }
+    VoteDown.getVotesDown(number,callBack3)
+ 
   };
  }]);
