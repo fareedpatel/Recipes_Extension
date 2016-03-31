@@ -9,14 +9,14 @@ angular.module('recipesApp.updaterecipe', ['ngRoute'])
   });
 }])
 .controller('UpdateRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', "UpdateRecipeService", function($scope, $http, $location, $routeParams, UpdateRecipeService) {
-    // $scope.name = $routeParams.recipeName
-    // $scope.instructions = $routeParams.recipeInstructions
-    // $scope.ingredients = $routeParams.recipeIngredients
-    // $scope.preparation_time = $routeParams.recipePreparation_time
+    $scope.name = $routeParams.recipeName
+    $scope.instructions = $routeParams.recipeInstructions
+    $scope.ingredients = $routeParams.recipeIngredients
+    $scope.preparation_time = $routeParams.recipePreparation_time
     var number = $routeParams.recipeId
     $scope.editRecipe = function(name, ingredients, instructions, preparation_time, link, callBack) {
     var callBack = function(data,status){
-      $location.path('/recipes');
+      $location.path('/recipes/'+$routeParams.recipeId);
     }
     UpdateRecipeService.updateRecipe(name, ingredients, instructions, preparation_time, link, number, callBack)
   }

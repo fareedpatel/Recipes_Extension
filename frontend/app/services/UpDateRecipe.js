@@ -1,5 +1,5 @@
 'use strict';
-angular.module('recipesApp.postrecipe')
+angular.module('recipesApp.updaterecipe')
 .service('UpdateRecipeService', function($http){
 	return {
 		updateRecipe: function(name, instructions, ingredients, preparation_time, link, number, callBack) {

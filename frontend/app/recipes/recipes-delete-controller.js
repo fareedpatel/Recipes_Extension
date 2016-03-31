@@ -9,14 +9,14 @@ angular.module('recipesApp.deleterecipes', ['ngRoute'])
   });
 }])
 .controller('DeleteRecipesCtrl', [ "$scope", "$http", "$routeParams", "$location", "DeleteRecipesService", function($scope, $http, $routeParams, $location, DeleteRecipesService) {
-  var number = $routeParams.recipeId
+  
+  var recipeId = $routeParams.recipeId
+
+
   $scope.deleteRecipe = function() {
   	 var callBack = function(data,status){
   		$location.path('/recipes');
   	}
-  	DeleteRecipesService.eliminateRecipe(number, callBack)
-  // var number = $routeParams.recipeId
- 	// $http.delete('http://localhost:3000/recipes/' + number + '.json').success(function(data){
- 	// 	$location.path('/recipes')
+  	DeleteRecipesService.eliminateRecipe(recipeId, callBack)
  }
 }]);
