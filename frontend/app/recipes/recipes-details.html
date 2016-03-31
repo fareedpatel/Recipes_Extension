@@ -2,13 +2,13 @@
 <div ng-controller='VoteRecipesCtrl'>
 	<form ng-click='voteRecipeUp()' id="vote_recipe">
 	<input id= 'like' type="submit" value="Like"></form>
-	likes:{{recipe.votespositive}}<br>
+	Likes:{{recipe.votespositive}}<br>
 </div>
 <br>
 <div ng-controller='VoteRecipesCtrl'>
 	<form ng-click='voteRecipeDown()' id="vote_recipe">
 	<input id= 'dislike' type="submit" value="DisLike"></form>
-	dislikes:{{recipe.votesnegative}}
+	Dislikes:{{recipe.votesnegative}}
 </div>
 <div ng-controller='DeleteRecipesCtrl'>
 	<form ng-click='deleteRecipe()' id="Delete_recipe">
