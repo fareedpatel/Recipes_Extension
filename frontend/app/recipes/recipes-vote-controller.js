@@ -9,20 +9,25 @@ angular.module('recipesApp.voterecipe', ['ngRoute'])
   });
 }])
 
-.controller('VoteRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
+.controller('VoteRecipesCtrl', [ "$scope", "$http", '$location', '$routeParams', 'GetVotes', 'VoteUp', function($scope, $http, $location, $routeParams,GetVotes, VoteUp) {
+  
   var number = $routeParams.recipeId
-  $http.get('http://localhost:3000/recipes/' + number + '.json').success(function(data){
-    $scope.recipe = data
-  });
+  var callBack2 = function(data,status){
+     $scope.recipe = data;
+  }
+  GetVotes.getVotesRecipe(number, callBack2)
 
- $scope.voteRecipeUp = function() {
+ $scope.voteRecipeUp = function(number, callBack1) {
   var number = $routeParams.recipeId
-  $http.post('http://localhost:3000/recipes/' + number +'/like.json').success(function(data, status){
+  var callBack1 = function(data,status){
     $scope.recipe = data
     $scope.$apply
     $location.path('/recipes/'+ number)
-    });
+    }
+    VoteUp.getVotesUp(number,callBack1)
   };
+
+
   $scope.voteRecipeDown = function() {
   var number = $routeParams.recipeId
   $http.post('http://localhost:3000/recipes/' + number +'/dislike.json').success(function(data, status){
