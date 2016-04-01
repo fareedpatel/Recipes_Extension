@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="recipesApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="recipesApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="recipesApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="recipesApp" class="no-js"> <!--<![endif]-->
+ <html lang="en" ng-app="recipesApp" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Recipedia</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
+  <link href="recipe_style/stylesheets/styles.css" rel="stylesheet" type="text/css" />
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a ng-href="#/add-recipe" id="New_recipe">New recipe</a>
-    <li><a ng-href="#/recipes-view"id='See_recipe'>See recipes</a></li>
-    <li><a ng-href="#/index">Main Page</a></li>
-  </ul>
+  <main class="container-fluid">
+    <section class="row menu">
+      <ul class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 menu__list">
+        <li class="list__links">
+          <h4><a ng-href="#/recipes-view"id='See_recipe'>home</a>
+          </h4>
+        </li>
+        <li class="list__links">
+          <h4>
+            <a ng-href="#/add-recipe" id="New_recipe">new recipe</a>
+          </h4>
+        </li>
+      </ul>
+    </section>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <section class="row heading" >
+      <h1 class="col-xs-12 col-sm-12 col-md-12 heading__title">recipedia</h1>
+    </section>
 
-  <div ng-view></div>
+      <div ng-view></div>
 
-
+    </main>
 
   <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>  -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
@@ -46,11 +49,12 @@
   <script src="services/UpDateRecipe.js"></script>
   <script src="services/GetVotes.js"></script>
   <script src="services/VoteUp.js"></script>
-  <script src="services/GetInfoForUpdateFields.js"></script>  
-  <script src="services/VotesDown.js"></script>  
+  <script src="services/GetInfoForUpdateFields.js"></script>
+  <script src="services/VotesDown.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
 </body>
 </html>

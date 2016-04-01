@@ -1,0 +1,38 @@
+section.menu {
+  height: 55px;
+}
+
+.menu {
+  text-align: left;
+  height: 100px;
+  padding-top: 0px;
+  background-color: #272032;
+  ul {
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin-top: 13px;
+  }
+  li {
+    display: inline;
+  }
+  h4 {
+    display: inline;
+    margin: 0px;
+    padding: 0px 9px;
+    width: 35px;
+    font-weight: none;
+  }
+  a {
+    color: #ffffff;
+    padding: 5px 10px;
+    border: solid 2px #bdc0c0;
+    border-radius: 5px;
+    &:hover {
+      background-color: #282133;
+      color: #e5e5e5;
+      border-color: #7e8080;
+      text-decoration: none;
+    }
+  }
+}

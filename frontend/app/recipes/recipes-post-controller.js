@@ -7,10 +7,11 @@ angular.module('recipesApp.postrecipe', ['ngRoute'])
     controller: 'PostRecipesCtrl'
   });
 }])
+
 .controller('PostRecipesCtrl', [ "$scope", "$http", '$location', "PostRecipesService", function($scope, $http, $location, PostRecipesService) {
   $scope.postRecipe = function(name, ingredients, instructions, preparation_time, link, callBack) {
     var callBack = function(data,status){
-  		$location.path('/recipes');
+  		$location.path('#/recipes-view');
   	}
   	PostRecipesService.createRecipe(name, ingredients, instructions, preparation_time, link, callBack)
   }

@@ -1,0 +1,40 @@
+section.recipes {
+  margin-top: 10px;
+}
+
+.recipes {
+  text-align: center;
+  ul {
+    display: inline-block;
+    list-style: none;
+  }
+  li {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://static.pexels.com/photos/5938/food-salad-healthy-lunch-large.jpg');
+    background-size: cover;
+    height: 150px;
+    border: 2px solid #a4a6a6;
+    border-radius: 10px;
+  }
+  div {
+    padding-top: 50px;
+  }
+  span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  p, a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #272032;
+  }
+
+  a {
+    &:hover {
+      color: #bdc0c0;
+      text-decoration: none;
+    }
+  }
+}

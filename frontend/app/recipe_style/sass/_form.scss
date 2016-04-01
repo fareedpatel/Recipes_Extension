@@ -1,0 +1,43 @@
+.form {
+  h3 {
+    text-align: center;
+  }
+  label, input, textarea {
+    margin-top: 5px;
+  }
+
+  input, textarea {
+    border-radius: 5px;
+    border-style: inset;
+    border-width: 2px;
+    color: #000;
+  }
+  textarea {
+    height: 200px;
+  }
+}
+
+.form__complete {
+  border: 3px solid #504441;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #5d4f4c;
+  color: #ffffff;
+}
+
+.form__submit {
+  text-align: center
+  margin-top: 5px;
+  padding-bottom: 15px;
+  input {
+    background-color: #433937;
+    border: 1px solid #332B2A;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ffffff;
+    &:hover {
+      background-color: #332B2A;
+    }
+  }
+}

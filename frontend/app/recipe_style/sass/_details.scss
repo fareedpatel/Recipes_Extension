@@ -1,0 +1,125 @@
+.details {
+  text-align: center;
+  div {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+}
+
+.details__info {
+  background-color: #5d4f4c;
+  text-align: center;
+  height: 150px;
+  color: #ffffff;
+}
+
+.details__votes {
+    font-size: 20px;
+    button {
+    background-color: #5d4f4c;
+    border: none;
+    font-size: 30px;
+    &:hover {
+      color: #9e9e82;
+    }
+  }
+}
+
+.votes__up, .details__update {
+    text-align: right;
+}
+
+.votes__down, .details__delete {
+  text-align: left;
+}
+
+.details__delete {
+  input {
+    background-color: #433937;
+    border: 1px solid #504441;
+    border-radius: 5px;
+    padding: 4px;
+  }
+}
+
+.details__update {
+  margin-top: 5px;
+  a {
+    background-color: #433937;
+    border: 1px solid #504441;
+    border-radius: 5px;
+    padding: 5px 4px 6px 4px;
+    color: #ffffff;
+  }
+}
+.details__delete, .details__update{
+  input, a {
+    &:hover {
+      background-color: #322b29;
+      text-decoration: none;
+      font-color: #9e9e82;
+    }
+  }
+}
+
+.details__method {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.method__ingredients {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://static.pexels.com/photos/5938/food-salad-healthy-lunch-large.jpg');
+  border: 2px solid #a4a6a6;
+  border-radius: 10px;
+  height: 250px;
+    p {
+    padding-left: 10px;
+    padding-top: 5px;
+    text-transform: capitalize;
+  }
+}
+
+.method__instructions, .method_ingredients {
+  border: 2px solid #a4a6a6;
+  border-radius: 10px;
+  height: 250px;
+    p {
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+}
+
+.method__instructions {
+  background-color: #9e9e82;
+  margin-left: 5px;
+}
+
+.details__time {
+  text-align: left;
+  p {
+    height: 60px;
+    width: 60px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    color: #5d4f4c;
+    border: 2px solid #4c413f;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-left: -15px;
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+  }
+}
+
+.youtube-player {
+  margin-top: 10px;
+  height: 400px;
+  width: 100%;
+  border-radius: 5px;
+}
