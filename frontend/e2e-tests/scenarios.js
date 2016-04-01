@@ -7,7 +7,7 @@ describe('recipesApp', function() {
 
   it('should automatically redirect to /recipes-view when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/index");
+    expect(browser.getLocationAbsUrl()).toMatch("/recipes-view");
   });
 
   describe('/recipes', function() {
@@ -21,14 +21,14 @@ describe('recipesApp', function() {
     it('should be able to add recipes', function(){
       browser.get('index.html');
       recipe.newRecipe("Chicken", "chicken", "cook", "40");
-      expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/Chicken/);
+      expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/CHICKEN/);
     });
 
     it('should have ingredients', function() {
       browser.get('index.html');
       recipe.newRecipe("Pizza", "dough, cheese, tomato", "cook", "20");
       element(by.id("Pizza")).click();
-      expect(element.all(by.css('[ng-view]')).getText()).toMatch(/dough, cheese, tomato/);
+      expect(element.all(by.css('[ng-view]')).getText()).toMatch(/Dough, Cheese, Tomato/);
     });
 
     it('should have instructions', function() {
@@ -78,8 +78,8 @@ describe('recipesApp', function() {
       var input = element(by.model('ingredientValue'));
       input.sendKeys('bread');
       expect(element(by.id("Cereal")).isPresent()).toBe(false);
-      expect(element.all(by.css('[ng-view] a')).first().getText()).toMatch(/Cheese Sandwich/);
-      expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/Bacon Sandwich/);
+      expect(element.all(by.css('[ng-view] a')).first().getText()).toMatch(/CHEESE SANDWICH/);
+      expect(element.all(by.css('[ng-view] a')).last().getText()).toMatch(/BACON SANDWICH/);
     });
   });
 });
