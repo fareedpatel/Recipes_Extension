@@ -1,6 +1,6 @@
 'use strict';
 angular.module('recipesApp.postrecipe')
-.service('PostRecipeService', function($http){
+.service('PostRecipesService', function($http){
 	return {
 		createRecipe: function(name, ingredients, instructions, preparation_time, link, callBack) {
 			var param= {name, ingredients, instructions, votespositive: 0, votesnegative: 0, preparation_time, link}
