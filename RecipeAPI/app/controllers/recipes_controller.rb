@@ -8,15 +8,13 @@ class RecipesController < ApplicationController
 
   def like
     @recipe = Recipe.find(params[:recipe_id])
-    @votes = @recipe.votespositive + 1
-    @recipe.update(votespositive: @votes)
+    @recipe.update(votespositive: @recipe.votespositive + 1)
     render :show
   end
 
   def dislike
     @recipe = Recipe.find(params[:recipe_id])
-    @votes = @recipe.votesnegative + 1
-    @recipe.update(votesnegative: @votes)
+    @recipe.update(votesnegative: @recipe.votesnegative + 1)
     render :show
   end
 
@@ -38,7 +36,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     respond_to do |format|
       if @recipe.save
-        p @recipe
         format.json { render :show, status: :created, location: @recipe }
       else
         format.json { render json: @recipe.errors, status: :unprocessable_entity }
