@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="recipesApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="recipesApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="recipesApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="recipesApp" class="no-js"> <!--<![endif]-->
+ <html lang="en" ng-app="recipesApp" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,10 +29,6 @@
       <h1 class="col-xs-12 col-sm-12 col-md-12 heading__title">recipedia</h1>
     </section>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-
       <div ng-view></div>
 
     </main>
@@ -55,7 +48,6 @@
 <script src="services/postRecipe.js"></script>
 <script src="services/DeleteRecipe.js"></script>
 <script src="services/UpDateRecipe.js"></script>
-
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
