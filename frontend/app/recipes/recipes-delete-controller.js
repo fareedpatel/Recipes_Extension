@@ -8,15 +8,15 @@ angular.module('recipesApp.deleterecipes', ['ngRoute'])
     controller: 'DeleteRecipesCtrl'
   });
 }])
+
 .controller('DeleteRecipesCtrl', [ "$scope", "$http", "$routeParams", "$location", "DeleteRecipesService", function($scope, $http, $routeParams, $location, DeleteRecipesService) {
   
   var recipeId = $routeParams.recipeId
-
 
   $scope.deleteRecipe = function() {
   	 var callBack = function(data,status){
   		$location.path('/recipes');
   	}
-  	DeleteRecipesService.eliminateRecipe(recipeId, callBack)
+  DeleteRecipesService.eliminateRecipe(recipeId, callBack)
  }
 }]);
