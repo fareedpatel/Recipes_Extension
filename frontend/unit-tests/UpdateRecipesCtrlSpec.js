@@ -6,16 +6,17 @@ describe("UpdateRecipesCtrl", function(){
       $httpBackend = _$httpBackend_;
       routeParams = $routeParams
       params = JSON.stringify({name: field})
-      $httpBackend.expectPUT("http://localhost:3000/recipes/1.json", params).respond(200)
+      $httpBackend.when('GET',"http://localhost:3000/recipes/1.json", params).respond(200)
+      $httpBackend.when('PUT',"http://localhost:3000/recipes/1.json", params).respond(200)
       location = $location
       scope = $rootScope.$new();
-      ctrl = $controller("UpdateRecipesCtrl", {$scope: scope, $routeParams: {recipeId: "1"}});
+      ctrl = $controller("UpdateRecipesCtrl", {$scope: scope, $routeParams: {recipeId: 1}});
       field = "string"
     });
   });
 
   it("sends a request to the backend", function(){
-    scope.editRecipe()
+    scope.editRecipe();
     $httpBackend.flush()
     expect(location.path()).toBe('/recipes/1')
   });
