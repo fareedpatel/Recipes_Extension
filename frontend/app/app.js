@@ -8,8 +8,21 @@ angular.module('recipesApp', [
   'recipesApp.deleterecipes',
   'recipesApp.updaterecipe',
   'recipesApp.voterecipe',
-  'ngSanitize'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/recipes-view'});
+  'ngSanitize',
+  'ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngTouch',
+  'ng-token-auth'
+])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+  .when('/sign_in', {
+    templateUrl: 'views/user_sessions/new.html',
+    controller: 'UserSessionsCtrl'
+  })
+  .otherwise({
+    redirectTo: '/recipes-view'
+  });
 }]);
