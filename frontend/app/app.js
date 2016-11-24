@@ -18,10 +18,10 @@ angular.module('recipesApp', [
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
-  .when('/sign_in', {
-    templateUrl: 'views/user_sessions/new.html',
-    controller: 'UserSessionsCtrl'
-  })
+  // .when('/sign_in', {
+  //   templateUrl: 'views/user_sessions/new.html',
+  //   controller: 'UserSessionsCtrl'
+  // })
   .otherwise({
     redirectTo: '/recipes-view'
   });
