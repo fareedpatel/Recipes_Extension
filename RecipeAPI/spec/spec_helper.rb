@@ -12,6 +12,14 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+require "rails_helper.rb"
+
+Capybara.javascript_driver = :selenium
+ 
+# Includes rack-rewrite configuration so HTML5 pushState can function properly.
+Capybara.app = Rack::Builder.new do
+  eval File.read(Rails.root.join('config.ru'))
+end 
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
